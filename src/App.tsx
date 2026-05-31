@@ -165,7 +165,7 @@ function App() {
             </span>
             <span className="grid">
               <span className="text-base font-bold tracking-normal">Blog Clay</span>
-              <span className="text-xs font-medium text-slate-500">이미지 기반 글쓰기</span>
+              <span className="text-xs font-medium text-slate-500">이미지 기반 초안 작성</span>
             </span>
           </a>
 
