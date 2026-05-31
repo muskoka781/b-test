@@ -245,7 +245,7 @@ function App() {
                   />
                   <Button
                     aria-label={`${image.file.name} 삭제`}
-                    className="absolute right-1.5 top-1.5 size-7 bg-white/90 text-slate-950 opacity-0 shadow-sm hover:bg-white group-hover:opacity-100"
+                    className="absolute right-1.5 top-1.5 size-7 opacity-0 group-hover:opacity-100"
                     onClick={() => removeImage(image.id)}
                     size="icon"
                     type="button"
@@ -309,7 +309,7 @@ function App() {
           ) : null}
 
           <Button
-            className="mt-auto h-11 rounded-2xl bg-[#ea7a5f] text-white shadow-[0_14px_26px_rgba(234,122,95,0.28),inset_0_1px_0_rgba(255,255,255,0.45)] hover:bg-[#dd6d54]"
+            className="mt-auto"
             disabled={!canGenerate}
             onClick={handleGenerate}
             type="button"
