@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.96 0.025 62);
+  --foreground: oklch(0.18 0.025 250);
+  --card: oklch(0.99 0.018 72);
+  --card-foreground: oklch(0.18 0.025 250);
+  --popover: oklch(0.99 0.018 72);
+  --popover-foreground: oklch(0.18 0.025 250);
+  --primary: oklch(0.66 0.16 36);
+  --primary-foreground: oklch(0.99 0.01 70);
+  --secondary: oklch(0.91 0.05 176);
+  --secondary-foreground: oklch(0.23 0.05 190);
+  --muted: oklch(0.93 0.018 62);
+  --muted-foreground: oklch(0.5 0.025 250);
+  --accent: oklch(0.88 0.08 84);
+  --accent-foreground: oklch(0.28 0.04 70);
+  --destructive: oklch(0.58 0.2 25);
+  --border: oklch(0.89 0.025 65);
+  --input: oklch(0.89 0.025 65);
+  --ring: oklch(0.72 0.13 35);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  }
+}
+
+.clay-shell {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(255, 255, 255, 0.9), transparent 18rem),
+    radial-gradient(circle at 84% 12%, rgba(151, 211, 203, 0.42), transparent 22rem),
+    linear-gradient(135deg, #f8dfd1 0%, #f4ead8 46%, #dfeee7 100%);
+}
+
+.clay-panel,
+.clay-nav,
+.clay-dropzone,
+.clay-empty,
+.clay-field,
+.clay-tile {
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  background: rgba(255, 250, 244, 0.76);
+  box-shadow:
+    18px 18px 36px rgba(154, 107, 72, 0.16),
+    -14px -14px 30px rgba(255, 255, 255, 0.68),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.clay-dropzone,
+.clay-empty {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.58), rgba(248, 221, 207, 0.58)),
+    rgba(255, 250, 244, 0.72);
+}
+
+.clay-field {
+  background: rgba(255, 255, 255, 0.56);
+  box-shadow:
+    inset 8px 8px 18px rgba(154, 107, 72, 0.1),
+    inset -8px -8px 18px rgba(255, 255, 255, 0.82);
+}
+
+.clay-mark {
+  background: linear-gradient(145deg, #f39a78, #dd624e);
+  box-shadow:
+    10px 10px 22px rgba(179, 91, 68, 0.24),
+    -8px -8px 18px rgba(255, 255, 255, 0.45),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.52);
+}
