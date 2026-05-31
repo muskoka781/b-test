@@ -6,7 +6,7 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'border border-white/60 bg-[#ea7a5f] text-white shadow-[0_14px_26px_rgba(234,122,95,0.28),inset_0_1px_0_rgba(255,255,255,0.48)] hover:bg-[#dd6d54] hover:shadow-[0_18px_30px_rgba(234,122,95,0.34),inset_0_1px_0_rgba(255,255,255,0.56)]',
+          'border border-white/60 bg-[#e53935] text-white shadow-[0_14px_26px_rgba(229,57,53,0.28),inset_0_1px_0_rgba(255,255,255,0.48)] hover:bg-[#c62828] hover:shadow-[0_18px_30px_rgba(229,57,53,0.34),inset_0_1px_0_rgba(255,255,255,0.56)]',
         destructive:
           'border border-white/60 bg-destructive text-white shadow-[0_14px_26px_rgba(220,38,38,0.22),inset_0_1px_0_rgba(255,255,255,0.42)] hover:bg-destructive/90 focus-visible:ring-destructive/20',
         outline:
